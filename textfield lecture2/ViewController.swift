@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var outputLabel: UILabel!
     
-    let textfield2 = UITextField(frame: CGRect(x: 20, y: 60, width: 200, height: 34))
+    let textfield2 = UITextField(frame: CGRect(x: 20, y: 70, width: 200, height: 34))
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -23,6 +23,17 @@ class ViewController: UIViewController {
 
    
     @IBAction func buttonWasPressed(_ sender: Any) {
+        
+        let number1String = textfield.text!
+        let number2String = textfield2.text!
+        
+        let number1 = Int(number1String)!
+        let number2 = Int(number2String)!
+        
+        let answer = number1 + number2
+        
+        outputLabel.text = String(answer)
+        
     }
     
 }
